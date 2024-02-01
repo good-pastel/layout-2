@@ -1,4 +1,4 @@
-# Layout - 1 CSS - GRID
+# Layout - 2 CSS - GRID
 
 > [[layout - 2](https://good-pastel.github.io/layout-2)]
 
