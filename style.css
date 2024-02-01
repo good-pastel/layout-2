@@ -1,0 +1,127 @@
+@font-face {
+  font-family: "ambleregular";
+  src: url("font/amble-regular-webfont.woff2") format("woff2"),
+    url("font/amble-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "ambleregular", serif;
+}
+.container {
+  width: 80%;
+  margin: 50px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+    "header header header"
+    "nav nav nav"
+    "content content content"
+    "content content content"
+    "footer footer footer";
+}
+.item {
+  width: 100%;
+  background-color: aquamarine;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.header {
+  grid-area: header;
+  background-image: url(img/header.avif);
+  background-size: cover;
+  background-position: center;
+  border: 5px solid rgb(252, 199, 199);
+  background-color: antiquewhite;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: rgba(255, 255, 255, 0);
+  padding: 100px;
+  max-height: 50vh;
+}
+.nav {
+  display: block;
+  grid-area: nav;
+  background-color: bisque;
+  color: #9e5148;
+  box-sizing: border-box;
+}
+.content {
+  display: block;
+}
+.nav h2 {
+  text-align: center;
+  font-size: 1.2rem;
+  padding: 10px;
+}
+.nav ul {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 10px;
+}
+.nav ul li {
+  list-style-type: none;
+  border: 1px solid white;
+  box-shadow: 2px 2px 3px black;
+  padding: 5px;
+}
+.nav ul li:hover {
+  background-color: rgb(252, 85, 67);
+  cursor: pointer;
+}
+.nav ul li a {
+  text-decoration: none;
+  font-size: 0.8rem;
+  color: #9e5148;
+}
+.nav ul li a:hover {
+  color: white;
+}
+.content {
+  grid-area: content;
+  background-color: bisque;
+  box-sizing: border-box;
+}
+.content h2 {
+  padding: 10px;
+}
+.content p {
+  padding: 10px;
+}
+.footer {
+  grid-area: footer;
+  background-color: salmon;
+  font-size: 0.8rem;
+}
+
+@media screen and (min-width: 576px) {
+  * {
+    background-color: beige;
+  }
+  .container {
+    grid-template-areas:
+      "header header header"
+      "nav content content"
+      "nav content content"
+      "nav content content"
+      "footer footer footer";
+  }
+  .header {
+    grid-area: header;
+    background: linear-gradient(25deg, white, salmon);
+    border: none;
+    background-color: antiquewhite;
+    color: #9e5148;
+    font-size: xx-large;
+  }
+  .nav ul {
+    display: block;
+  }
+  .nav ul li {
+    margin: 10px;
+  }
+}
