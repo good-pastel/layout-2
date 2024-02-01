@@ -37,8 +37,6 @@
   background-size: cover;
   background-position: center;
   border: 5px solid rgb(252, 199, 199);
-  background-color: antiquewhite;
-  font-family: Georgia, "Times New Roman", Times, serif;
   color: rgba(255, 255, 255, 0);
   padding: 100px;
   max-height: 50vh;
@@ -98,10 +96,7 @@
   font-size: 0.8rem;
 }
 
-@media screen and (min-width: 780px) {
-  * {
-    background-color: beige;
-  }
+@media screen and (min-width: 768px) {
   .container {
     grid-template-areas:
       "header header header"
@@ -112,11 +107,51 @@
   }
   .header {
     grid-area: header;
-    background: linear-gradient(25deg, white, salmon);
+    /* background: linear-gradient(25deg, white, salmon); */
+    background-image: url(img/bg.png);
+    background-position: top left;
     border: none;
     background-color: antiquewhite;
     color: #9e5148;
     font-size: xx-large;
+  }
+  .header h2 {
+    font-size: 50px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 2px rgb(43, 1, 8);
+    font-family: "Bebas Neue", sans-serif;
+  }
+  .nav ul {
+    display: block;
+  }
+  .nav ul li {
+    margin: 10px;
+  }
+}
+@media screen and (min-width: 576px) {
+  .container {
+    grid-template-areas:
+      "header header header"
+      "nav content content"
+      "nav content content"
+      "nav content content"
+      "footer footer footer";
+  }
+  .header {
+    grid-area: header;
+    /* background: linear-gradient(25deg, white, salmon); */
+    background-image: url(img/bg.png);
+    background-position: top left;
+    border: none;
+    background-color: antiquewhite;
+    color: #9e5148;
+    font-size: xx-large;
+  }
+  .header h2 {
+    font-size: 50px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 2px rgb(43, 1, 8);
+    font-family: "Bebas Neue", sans-serif;
   }
   .nav ul {
     display: block;
