@@ -11,8 +11,8 @@
   font-family: "ambleregular", serif;
 }
 .container {
-  width: 80%;
-  margin: 50px auto;
+  width: 90%;
+  margin: 20px auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-areas:
@@ -40,6 +40,7 @@
   color: rgba(255, 255, 255, 0);
   padding: 100px;
   max-height: 50vh;
+  position: relative;
 }
 .nav {
   display: block;
@@ -58,7 +59,7 @@
 }
 .nav ul {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   padding: 10px;
 }
 .nav ul li {
@@ -85,49 +86,25 @@
   box-sizing: border-box;
 }
 .content h2 {
+  color: #9e5148;
   padding: 10px;
+  text-align: center;
 }
+
 .content p {
   padding: 10px;
+  text-align: justify;
+  color: #444444;
 }
 .footer {
   grid-area: footer;
   background-color: salmon;
+  color: #444444;
   font-size: 0.8rem;
 }
 
-@media screen and (min-width: 768px) {
-  .container {
-    grid-template-areas:
-      "header header header"
-      "nav content content"
-      "nav content content"
-      "nav content content"
-      "footer footer footer";
-  }
-  .header {
-    grid-area: header;
-    /* background: linear-gradient(25deg, white, salmon); */
-    background-image: url(img/bg.png);
-    background-position: top left;
-    border: none;
-    background-color: antiquewhite;
-    color: #9e5148;
-    font-size: xx-large;
-  }
-  .header h2 {
-    font-size: 50px;
-    text-transform: uppercase;
-    text-shadow: 2px 2px 2px rgb(43, 1, 8);
-    font-family: "Bebas Neue", sans-serif;
-  }
-  .nav ul {
-    display: block;
-  }
-  .nav ul li {
-    margin: 10px;
-  }
-}
+/* Responsive */
+
 @media screen and (min-width: 576px) {
   .container {
     grid-template-areas:
@@ -139,19 +116,49 @@
   }
   .header {
     grid-area: header;
-    /* background: linear-gradient(25deg, white, salmon); */
     background-image: url(img/bg.png);
     background-position: top left;
     border: none;
     background-color: antiquewhite;
-    color: #9e5148;
-    font-size: xx-large;
   }
   .header h2 {
-    font-size: 50px;
-    text-transform: uppercase;
-    text-shadow: 2px 2px 2px rgb(43, 1, 8);
-    font-family: "Bebas Neue", sans-serif;
+    font-family: "Single Day", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 80px;
+    color: #9e5148;
+    text-shadow: 3px 4px 5px black;
+  }
+  .nav ul {
+    display: block;
+  }
+  .nav ul li {
+    margin: 10px;
+  }
+}
+@media screen and (min-width: 780px) {
+  .container {
+    grid-template-areas:
+      "header header header"
+      "nav content content"
+      "nav content content"
+      "nav content content"
+      "footer footer footer";
+  }
+  .header {
+    grid-area: header;
+    background-image: url(img/bg.png);
+    background-position: top left;
+    border: none;
+    background-color: antiquewhite;
+  }
+  .header h2 {
+    font-family: "Single Day", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 80px;
+    color: #9e5148;
+    text-shadow: 3px 4px 5px black;
   }
   .nav ul {
     display: block;
