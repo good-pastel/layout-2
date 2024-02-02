@@ -33,7 +33,7 @@
 }
 .header {
   grid-area: header;
-  background-image: url(img/header.avif);
+  background-image: url(img/header.png);
   background-size: cover;
   background-position: center;
   border: 5px solid rgb(252, 199, 199);
@@ -99,7 +99,7 @@
 .footer {
   grid-area: footer;
   background-color: salmon;
-  color: #444444;
+  color: #181818;
   font-size: 0.8rem;
 }
 
